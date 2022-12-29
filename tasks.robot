@@ -1,9 +1,6 @@
 *** Settings ***
 Documentation       Playwright template.
-
 Library             RPA.Browser.Playwright
-Library             RPA.FileSystem
-Library             RequestsLibrary
 Library             lib/lib.py
 
 *** Variables ***
@@ -11,7 +8,7 @@ ${NOPECHA_KEY}    YOUR API KEY
 
 
 *** Tasks ***
-Minimal task
+Nopecha
     ${data}=    Download Nopecha
     Starting a browser with a page    ${data}
     GoTo Setup Nopecha    ${NOPECHA_KEY}
